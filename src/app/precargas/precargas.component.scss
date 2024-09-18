@@ -1,0 +1,31 @@
+.precargas-container {
+    padding: 20px;
+  
+    h2 {
+      margin-bottom: 20px;
+    }
+  
+    .custom-file-upload {
+      display: inline-block;
+      padding: 6px 12px;
+      cursor: pointer;
+      background-color: #2a3f54;
+      color: #ffffff;
+      border-radius: 4px;
+      font-size: 16px;
+      font-weight: bold;
+  
+      mat-icon {
+        vertical-align: middle;
+        margin-right: 8px;
+      }
+  
+      &:hover {
+        background-color: #1664c1;
+      }
+    }
+  
+    input[type="file"] {
+      display: none; /* Oculta el input de tipo archivo */
+    }
+  }

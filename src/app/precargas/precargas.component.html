@@ -1,0 +1,9 @@
+<div class="precargas-container">
+    <h2>Precargar Archivo Excel</h2>
+    <form>
+      <label for="file-upload" class="custom-file-upload">
+        <mat-icon>cloud_upload</mat-icon> Subir Archivo Excel
+      </label>
+      <input type="file" id="file-upload" (change)="onFileSelected($event)" accept=".xls,.xlsx" />
+    </form>
+  </div>

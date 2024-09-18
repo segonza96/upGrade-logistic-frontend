@@ -1,0 +1,118 @@
+/* Estilo del contenedor principal */
+.layout-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  /* Estilos del sidebar */
+  .app-sidebar {
+    width: 240px;
+    background-color: #2a3f54;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 0;
+    
+    .sidebar-header {
+      width: 100%;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #1a2b3c;
+    }
+    
+    .logo {
+      max-width: 100%;
+      height: auto;
+    }
+    
+    mat-nav-list {
+      width: 100%;
+      padding: 0;
+      
+      mat-list-item {
+        height: 50px;
+        display: flex;
+        align-items: center;
+        padding: 0 20px;
+        font-size: 16px;
+        color: #ffffff;
+        
+        &:hover {
+          background-color: #3a4f64;
+        }
+        
+        mat-icon {
+          margin-right: 16px;
+          color: #b0c4de;
+        }
+      }
+  
+      .active-link {
+        background-color: #1a73e8;
+      }
+    }
+  }
+  
+  /* Estilos del header */
+  .main-header {
+    height: 64px;
+    background-color: #ffffff;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+  
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+    }
+    
+    .search-bar {
+      display: flex;
+      align-items: center;
+      background-color: #f5f5f5;
+      border-radius: 4px;
+      padding: 8px 12px;
+      mat-icon {
+        margin-right: 8px;
+      }
+      input {
+        border: none;
+        outline: none;
+        background: transparent;
+      }
+    }
+    
+    .user-profile {
+      display: flex;
+      align-items: center;
+      
+      mat-icon {
+        margin-right: 16px;
+        color: #5f6368;
+      }
+  
+      .profile-pic {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+    }
+  }
+  
+  /* Estilos de la zona de contenido */
+  .content-area {
+    padding: 16px;
+    background-color: #f9f9f9;
+    height: calc(100vh - 64px); /* Ajusta la altura del contenido principal */
+    overflow-y: auto;
+  }
+  

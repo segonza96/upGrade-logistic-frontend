@@ -1,0 +1,178 @@
+/* Estilo del contenedor principal */
+.layout-container {
+  height: 100vh; /* Asegura que el contenedor ocupe toda la altura de la ventana */
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  overflow-x: hidden;
+}
+
+/* Estilos del sidebar */
+.app-sidebar {
+  width: 240px;
+  background-color: #2a3f54;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 0;
+  height: 100vh; /* Sidebar ocupa toda la altura de la ventana */
+  overflow-x: hidden !important;
+  
+  .sidebar-header {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #2a3f54;
+  }
+  
+  .logo {
+    max-width: 80px;
+    font-size: 50px;
+    height: auto;
+    max-height: 80px; /* Limita la altura máxima del logo */
+    margin-left: 0px !important;
+    margin-right: 10px;
+    height: auto; /* Mantiene la proporción del logo */
+    width: auto; /* Mantiene la proporción del logo */
+    background-color: transparent; /* Asegura que el fondo del logo sea transparente */
+  }
+  .logo-text {
+    color: #ffffff; /* Texto blanco */
+    font-size: 18px; /* Tamaño de la fuente del texto al lado del logo */
+    font-weight: bold; /* Hace el texto más visible */
+  }
+  
+  mat-nav-list {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    
+    mat-list-item {
+      height: 50px;
+      display: flex;
+      align-items: center;
+      padding: 0 16px;
+      font-size: 16px;
+      color: #ffffff !important;
+      justify-content: space-between;
+      box-sizing: border-box;
+      
+      &:hover {
+        background-color: #3a4f64;
+      }
+      
+      mat-icon {
+        margin-right: 16px;
+        color: #ffffff;
+        vertical-align: middle; /* Alinea el ícono verticalmente */
+        font-size: 24px; /* Asegúrate de que todos los íconos tengan el mismo tamaño */
+      }
+      span {
+        color: #ffffff !important; /* También fuerza el color blanco del texto */
+      }
+      .expand-icon {
+        /* Alinea la flecha hacia la derecha */
+        margin-right: 10px !important;
+        transition: transform 0.3s ease;
+      }
+      &.expanded .expand-icon {
+        transform: rotate(90deg); /* Gira la flecha cuando está expandido */
+      }
+    }
+
+    .sub-menu {
+      padding-left: 36px; /* Alinea los subítems */
+      background-color: #2a3f54; /* Diferencia visualmente el submenú */
+      mat-list-item {
+        padding: 8px 20px;
+        height: 40px;
+        box-sizing: border-box;
+        mat-icon {
+          margin-right: 8px;
+          font-size: 20px;
+        }
+      }
+    }
+
+    .active-link {
+      background-color: #1a73e8;
+    }
+  }
+}
+
+/* Estilos del header */
+.main-header {
+  height: 64px;
+  background-color: #ffffff;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  width: calc(100% - 240px); /* Resta el ancho del sidebar para el header */
+  position: fixed; /* Fija el header en la parte superior */
+  z-index: 2; /* Asegura que el header esté por encima del contenido */
+  left: 240px; /* Alinea el header con el contenido al lado del sidebar */
+  
+  .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-right: 16px; /* Añade un padding interno a la derecha */
+    box-sizing: border-box;
+  }
+  
+  .search-bar {
+    display: flex;
+    align-items: center;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+    padding: 8px 12px;
+    width: 40%; /* Asegura que la barra de búsqueda tenga un tamaño adecuado */
+    mat-icon {
+      margin-right: 8px;
+    }
+    input {
+      border: none;
+      outline: none;
+      background: transparent;
+      width: 100%;
+    }
+  }
+  
+  .user-profile {
+    display: flex;
+    align-items: center;
+
+    gap: 16px; /* Espaciado uniforme entre iconos y perfil */
+    
+    mat-icon {
+      color: #5f6368;
+    }
+
+    .profile-pic {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+  }
+}
+
+/* Estilos de la zona de contenido */
+.content-area {
+  margin-top: 64px; /* Desplaza el contenido hacia abajo para no estar detrás del header */
+  height: calc(100vh - 64px); /* Ajusta la altura del contenido principal para ocupar el espacio restante */
+  overflow-y: auto;
+  padding: 16px; /* Ajusta el padding para darle espacio al contenido */
+  background-color: #f9f9f9; /* Color de fondo */
+  margin-left: 240px; /* Desplaza el contenido hacia la derecha para alinear con el sidebar */
+  box-sizing: border-box; /* Incluye el padding en el tamaño total del elemento */
+}
+* {
+  box-sizing: border-box;
+}
