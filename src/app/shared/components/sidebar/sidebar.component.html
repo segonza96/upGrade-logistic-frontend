@@ -1,0 +1,35 @@
+<aside class="sidebar">
+  <div class="sidebar-header">
+    <img src="assets/logo.svg" alt="Logo" class="sidebar-logo" />
+    <span class="sidebar-title">HomeD</span>
+  </div>
+  <nav class="sidebar-menu">
+    <a mat-list-item routerLink="/logistics/dashboard" routerLinkActive="active">
+      <mat-icon>dashboard</mat-icon>
+      <span>Dashboard</span>
+    </a>
+    <div class="sidebar-orders-group">
+      <button mat-list-item (click)="toggleOrdersMenu()" [class.active]="ordersMenuOpen">
+        <mat-icon>shopping_cart</mat-icon>
+        <span>Órdenes</span>
+        <mat-icon class="expand-icon">{{ ordersMenuOpen ? 'expand_less' : 'expand_more' }}</mat-icon>
+      </button>
+      <div *ngIf="ordersMenuOpen" class="sidebar-orders-submenu">
+        <a mat-list-item routerLink="/logistics/orders/list" routerLinkActive="active" (click)="closeOrdersMenu()">
+          <mat-icon>list</mat-icon>
+          <span>Ver órdenes</span>
+        </a>
+        <a mat-list-item (click)="goToCreateOrder()">
+          <mat-icon>add_circle</mat-icon>
+          <span>Crear orden</span>
+        </a>
+      </div>
+    </div>
+    <!-- Puedes agregar más secciones aquí -->
+  </nav>
+  <div class="sidebar-footer">
+    <img src="assets/profile.png" alt="Usuario" class="sidebar-avatar" />
+    <span class="sidebar-username">Usuario</span>
+  </div>
+</aside>
+  

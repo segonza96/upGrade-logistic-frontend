@@ -1,0 +1,37 @@
+.orders-list-container {
+  max-width: 900px;
+  margin: 32px auto;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(35, 57, 93, 0.08);
+  padding: 32px 24px;
+}
+h2 {
+  color: #23395d;
+  margin-bottom: 24px;
+}
+table {
+  width: 100%;
+  margin-bottom: 16px;
+}
+.mat-header-cell, .mat-cell {
+  font-size: 1rem;
+  padding: 12px 8px;
+}
+.mat-header-cell {
+  font-weight: 700;
+  color: #4066a5;
+}
+.mat-row:nth-child(even) .mat-cell {
+  background: #eaf1fb;
+}
+.no-orders-msg {
+  color: #888;
+  text-align: center;
+  margin-top: 24px;
+  font-size: 1.1rem;
+}
+mat-progress-spinner {
+  display: block;
+  margin: 32px auto;
+} 

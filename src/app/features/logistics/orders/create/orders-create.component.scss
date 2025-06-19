@@ -1,0 +1,23 @@
+.orders-create-container {
+  max-width: 500px;
+  margin: 32px auto;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(35, 57, 93, 0.08);
+  padding: 32px 24px;
+}
+h2 {
+  color: #23395d;
+  margin-bottom: 24px;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.full-width {
+  width: 100%;
+}
+button {
+  align-self: flex-end;
+} 

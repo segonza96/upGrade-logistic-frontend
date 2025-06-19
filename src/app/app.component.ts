@@ -5,11 +5,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import {HeaderComponent } from './header/header.component';
-import {SidebarComponent } from './sidebar/sidebar.component';
-
-
-
+import { HeaderComponent } from './shared/components/header/header.component';
+import { SidebarComponent } from './shared/components/sidebar/sidebar.component';
 
 @Component({
   selector: 'app-root',
@@ -22,13 +19,13 @@ import {SidebarComponent } from './sidebar/sidebar.component';
     CommonModule,
     HeaderComponent,
     SidebarComponent,
-    RouterModule // También es posible que debas importar las rutas aquí si este es el componente raíz
+    RouterModule
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'homeD';
+  title = 'upGrade Logistics';
   expandedMenu: string = '';
   
   toggleSubMenu(menu: string) {

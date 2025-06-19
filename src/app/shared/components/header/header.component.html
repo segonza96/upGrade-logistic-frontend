@@ -1,0 +1,20 @@
+<mat-toolbar class="main-header">
+  <div class="header-content">
+    <div class="header-left">
+      <img src="assets/logo.svg" alt="Logo" class="header-logo">
+      <span class="header-title">HomeD</span>
+    </div>
+    <div class="header-right">
+      <button mat-icon-button [matMenuTriggerFor]="userMenu" aria-label="Usuario">
+        <img src="assets/profile.png" alt="Perfil" class="header-avatar">
+      </button>
+      <mat-menu #userMenu="matMenu">
+        <button mat-menu-item>
+          <mat-icon>logout</mat-icon>
+          <span>Cerrar sesión</span>
+        </button>
+      </mat-menu>
+    </div>
+  </div>
+</mat-toolbar>
+  

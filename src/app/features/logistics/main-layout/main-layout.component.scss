@@ -1,0 +1,28 @@
+.main-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidenav-container {
+  flex: 1;
+  height: calc(100vh - 64px); /* Ajusta este valor según la altura de tu header */
+}
+
+.sidenav {
+  width: 250px;
+  background-color: #fafafa;
+}
+
+.sidenav-content {
+  padding: 20px;
+  background-color: #f5f5f5;
+}
+
+.content {
+  height: 100%;
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+} 
